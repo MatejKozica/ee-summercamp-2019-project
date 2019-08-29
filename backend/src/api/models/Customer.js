@@ -1,33 +1,36 @@
 const Sequelize = require('sequelize');
-const sequelize = require('../database/connection')
+const sequelize = require('../../database/connection');
 
 module.exports = sequelize.define('Customer', {
     id: {
-        type: Sequelize.INTEGER(11),
+        type: Sequelize.INTEGER,
         autoIncrement: true,
         allowNull: false,
         primaryKey: true,
     },
-    guestName: {
-        type: Sequelize.STRING(100),
+    customerName: {
+        type: Sequelize.STRING,
         allowNull: false,
     },
-    guestContact: {
-        type: Sequelize.STRING(100),
+    customerContact: {
+        type: Sequelize.STRING,
         allowNull: false,
         unique: true,
     },
     numberOfPeople: {
-        type: Sequelize.INTEGER(10),
+        type: Sequelize.INTEGER,
         allowNull: false,
     },
     amountToPay: {
-        type: Sequelize.INTEGER(10),
+        type: Sequelize.INTEGER,
         allowNull: false,
         default: 0,
     },
     bookedFrom: {
-        type: Sequelize.STRING(100),
+        type: Sequelize.STRING,
         allowNull: false,
     },
-})
+    TourId: {
+        type: Sequelize.INTEGER,
+    }
+});
