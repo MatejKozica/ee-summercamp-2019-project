@@ -11,11 +11,11 @@ module.exports = {
         allowNull: false,
         primaryKey: true,
       },
-      guestName: {
+      customerName: {
         type: Sequelize.STRING(100),
         allowNull: false,
       },
-      guestContact: {
+      customerContact: {
         type: Sequelize.STRING(100),
         allowNull: false,
         unique: true,
@@ -33,7 +33,9 @@ module.exports = {
         type: Sequelize.STRING(100),
         allowNull: false,
       },
-      tourId: Sequelize.INTEGER(11),
+      TourId: {
+        type: Sequelize.INTEGER,
+      },
       createdAt: Sequelize.DATE,
       updatedAt: Sequelize.DATE,
     })

@@ -9,6 +9,8 @@ app.use(function (error, request, response, next) {
     response.status(400).send(error.message);
 });
 
+app.use(express.json());
+
 app.use('/api/customers', customers)
 
 app.listen(port, function () {
