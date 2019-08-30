@@ -72,7 +72,7 @@ router.put('/:id', (req, res) => {
                 TourId: req.body.TourId,
             }, schema);
 
-            if (validate != null) {
+            if (validate.error != null) {
                 res.status(400).send('Error 400: Bad request')
             }
 
@@ -100,7 +100,7 @@ router.delete('/:id', (req, res) => {
         }
         else {
             res.send(JSON.stringify(customer));
-            Customer.delete({ where: { id: req.params.id } });
+            Customer.destroy({ where: { id: req.params.id } });
         }
     })
 });
