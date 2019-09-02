@@ -8,7 +8,7 @@ import App from './pages/app/App';
 const routes = (
     < BrowserRouter >
         <Switch>
-            <Route exact path='' component={App} />
+            <Route exact path='/app' component={App} />
         </Switch>
     </BrowserRouter >
 );
