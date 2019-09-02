@@ -1,0 +1,23 @@
+.tourPreview{
+    width: 100%;
+    padding: 5px 5px;
+    border-radius: 5px;
+    background: #9e9e9e;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    transition: 0.2s;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+.tourPreview:hover{
+    background: #9e9e9e;
+    transform: scale(1.025);
+    transition: 0.2s;
+}
+
+span{
+    margin-right: 5px;
+}
