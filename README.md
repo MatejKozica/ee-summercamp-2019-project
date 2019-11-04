@@ -27,7 +27,7 @@ npm run start
 
 
 
-``SQL
+```SQL
 DECLARE @REGISTRY_HIVE VARCHAR (255)
 DECLARE @REGISTRY_KEY VARCHAR (255)
 DECLARE @REGISTRY_VALUE VARCHAR (255)
@@ -50,4 +50,4 @@ IF @path is not null
   BEGIN
    print 'Does not exist !'
   END
-  ``
+  ```
